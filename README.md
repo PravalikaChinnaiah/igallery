@@ -26,51 +26,14 @@ Publish the website in the given URL.
 
 ## PROGRAM:
 
-```
-
-<!DOCTYPE html>
+```<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Image Gallery</title> 
-</head>  
-<body> 
-<div class="gallery-container"> 
-<img id="galleryImage" class="gallery-image" src="rollsroyce.jpg" height="40%" width="40%"> 
-<div id="caption" class="caption">Caption for Image 1</div> 
-<div class="gallery-buttons"> 
-<button onclick="prevImage()">Previous</button> 
-<button onclick="nextImage()">Next</button> 
-</div> 
-</div> 
-<script> 
-const images = [ 
-{ src: "rollsroyce.jpg", caption: "Caption for Image 1" }, 
-{ src: "lamborghini.jpg", caption: "Caption for Image 2" }, 
-{ src: "ferrari 1.jpg", caption: "Caption for Image 3" } 
-]; 
-let currentIndex = 0; 
-function updateGallery( )  
-{ 
-document.getElementById("galleryImage").src = images[currentIndex].src; 
-document.getElementById("caption").textContent = images[currentIndex].caption; 
-} 
-function nextImage( )  
-{ 
-currentIndex = (currentIndex + 1) % images.length; 
-updateGallery( ); 
-} 
-function prevImage( )  
-{ 
-currentIndex = (currentIndex - 1 + images.length) % images.length; 
-updateGallery( ); 
-} 
-</script> 
-</body>
-</html>
-
-.gallery-container  
+<style> 
+         .gallery-container  
 { 
             position: relative; 
             max-width: 600px; 
@@ -82,7 +45,7 @@ updateGallery( );
          } 
          .gallery-image  
 { 
-            width: 500%; 
+            width: 100%; 
             height: 600px; 
             object-fit: cover; 
             border-radius: 10px; 
@@ -108,11 +71,53 @@ updateGallery( );
             color: white; 
             transition: 0.3s; 
          } 
+     </style> 
+</head>  
+<body> 
+<div class="gallery-container"> 
+<img id="galleryImage" class="gallery-image" src="ferrari 1.jpg" height="40%" width="40%"> 
+<div id="caption" class="caption">Caption for Image 1</div> 
+<div class="gallery-buttons"> 
+<button onclick="prevImage()">Previous</button> 
+<button onclick="nextImage()">Next</button> 
+</div> 
+</div> 
+<script> 
+const images = [ 
+{ src: "ferrari 1.jpg", caption: "Caption for Image 1" }, 
+{ src: "lamborghini.jpg", caption: "Caption for Image 2" }, 
+{ src: "rollsroyce.jpg", caption: "Caption for Image 3" }, 
+]; 
+let currentIndex = 0; 
+function updateGallery( )  
+{ 
+document.getElementById("galleryImage").src = images[currentIndex].src; 
+document.getElementById("caption").textContent = images[currentIndex].caption; 
+} 
+function nextImage( )  
+{ 
+currentIndex = (currentIndex + 1) % images.length; 
+updateGallery( ); 
+} 
+function prevImage( )  
+{ 
+currentIndex = (currentIndex - 1 + images.length) % images.length; 
+updateGallery( ); 
+} 
+</script> 
+</body>
+</html>
 
-         ```
+```
+
+
 
 ## OUTPUT:
+![alt text](<Screenshot 2025-12-24 100514.png>)
 
+![alt text](<Screenshot 2025-12-24 100525.png>)
+
+![alt text](<Screenshot 2025-12-24 100539.png>)
 
 
 
