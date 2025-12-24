@@ -37,7 +37,7 @@ Publish the website in the given URL.
 </head>  
 <body> 
 <div class="gallery-container"> 
-<img id="galleryImage" class="gallery-image" src="sundar.jpg" height="40%" width="40%"> 
+<img id="galleryImage" class="gallery-image" src="rollsroyce.jpg" height="40%" width="40%"> 
 <div id="caption" class="caption">Caption for Image 1</div> 
 <div class="gallery-buttons"> 
 <button onclick="prevImage()">Previous</button> 
@@ -112,9 +112,9 @@ updateGallery( );
          ```
 
 ## OUTPUT:
-Screenshot 2025-12-24 100514.png
-Screenshot 2025-12-24 100525.png
-Screenshot 2025-12-24 100539.png
+
+
+
 
 
 
